@@ -1,6 +1,6 @@
-package com.example.lampanewstextingapp.restRervices;
+package com.example.lampanewstextingapp.restServices;
 
-import com.example.lampanewstextingapp.restRervices.pojoClasses.MyNews;
+import com.example.lampanewstextingapp.restServices.pojoClasses.MyNews;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

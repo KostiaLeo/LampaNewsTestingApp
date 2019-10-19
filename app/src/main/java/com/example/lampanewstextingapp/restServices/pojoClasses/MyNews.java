@@ -1,7 +1,4 @@
-package com.example.lampanewstextingapp.restRervices.pojoClasses;
-
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+package com.example.lampanewstextingapp.restServices.pojoClasses;
 
 public class MyNews {
 //        @SerializedName("next")

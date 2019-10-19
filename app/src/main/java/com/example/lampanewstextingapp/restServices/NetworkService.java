@@ -1,4 +1,4 @@
-package com.example.lampanewstextingapp.restRervices;
+package com.example.lampanewstextingapp.restServices;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

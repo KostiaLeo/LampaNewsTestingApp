@@ -1,24 +1,11 @@
-package com.example.lampanewstextingapp.restRervices.pojoClasses;
+package com.example.lampanewstextingapp.restServices.pojoClasses;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
-public class Results
-{
+public class Results {
 
     private String owner;
     private Image image;
-    private String price_week;
-    private String email_count;
-    private String price_month;
-    private String phone_count;
-    private String price;
-    private String name;
+    private String price_week, email_count, price_month, phone_count, price, name, id, category, favorite, view_count;
     private Currency currency;
-    private String id;
-    private String category;
-    private String favorite;
-    private String view_count;
 
     public String getOwner ()
     {

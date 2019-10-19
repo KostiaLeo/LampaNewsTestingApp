@@ -1,14 +1,9 @@
-package com.example.lampanewstextingapp.restRervices.pojoClasses;
-
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+package com.example.lampanewstextingapp.restServices.pojoClasses;
 
 public class Currency
 {
 
-    private String image;
-    private String name;
-    private String id;
+    private String image, name, id;
 
     public String getImage ()
     {

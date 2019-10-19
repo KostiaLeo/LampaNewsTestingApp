@@ -1,15 +1,8 @@
-package com.example.lampanewstextingapp.restRervices.pojoClasses;
-
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+package com.example.lampanewstextingapp.restServices.pojoClasses;
 
 public class Image {
 
-    private String width;
-
-    private String url;
-
-    private String height;
+    private String width, url, height;
 
     public String getWidth ()
     {
