@@ -26,7 +26,7 @@
             android:scrollHorizontally="true"
             android:text="Name"
             android:layout_above="@id/shortlay"
-            android:textColor="@color/black"
+            android:textColor="#FFFFFF"
             android:textSize="25sp" />
 
         <LinearLayout

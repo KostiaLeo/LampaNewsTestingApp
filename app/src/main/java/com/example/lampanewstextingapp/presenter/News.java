@@ -22,12 +22,14 @@ public class News {
     private final ArrayList<Results> results = new ArrayList<>();
     private RecyclerView recyclerView;
     private ViewPager2 viewPager;
-    public News(RecyclerView recyclerView) {
-        this.recyclerView = recyclerView;
-    }
 
-    public News(ViewPager2 viewPager) {
+    //public News(RecyclerView recyclerView) {
+    //    this.recyclerView = recyclerView;
+    //}
+
+    public News(ViewPager2 viewPager, RecyclerView recyclerView) {
         this.viewPager = viewPager;
+        this.recyclerView = recyclerView;
     }
 
     public ArrayList<Results> getAllNews() {
@@ -38,7 +40,6 @@ public class News {
                     myNews = response.body();
                     for (int i = 0; i < myNews.getResults().length; i++) {
                         results.add(myNews.getResults()[i]);
-                        System.out.println(myNews.getResults()[i].getImage().getHeight());
                     }
                     setRecyclerView(results);
                 }
@@ -53,8 +54,9 @@ public class News {
     }
 
     private void setRecyclerView(ArrayList<Results> results) {
-        System.out.println(results.get(0).getImage());
         TopNewsAdapter topNewsAdapter = new TopNewsAdapter(results);
         viewPager.setAdapter(topNewsAdapter);
+        NewsAdapter newsAdapter = new NewsAdapter(results);
+        recyclerView.setAdapter(newsAdapter);
     }
 }

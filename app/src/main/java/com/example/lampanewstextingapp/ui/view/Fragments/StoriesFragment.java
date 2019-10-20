@@ -33,11 +33,11 @@ public class StoriesFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_stories, container, false);
-       // newsRecycler = root.findViewById(R.id.products);
-        //newsRecycler.setLayoutManager(new LinearLayoutManager(context));
+        newsRecycler = root.findViewById(R.id.newzzz);
+        newsRecycler.setLayoutManager(new LinearLayoutManager(context));
         viewPager = root.findViewById(R.id.viewPager2);
         viewPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
-        News news = new News(viewPager);
+        News news = new News(viewPager, newsRecycler);
         news.getAllNews();
         return root;
     }
