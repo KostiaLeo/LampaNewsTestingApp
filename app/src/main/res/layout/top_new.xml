@@ -4,14 +4,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="8dp"
     tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/photo_top"
             android:layout_width="match_parent"
             android:layout_height="240dp"
-            android:layout_marginTop="8dp"
-            android:background="#E7E5E5"
+            android:background="#FFFFFF"
             android:scaleType="centerCrop" />
 
         <TextView
@@ -26,7 +26,7 @@
             android:scrollHorizontally="true"
             android:text="Name"
             android:layout_above="@id/shortlay"
-            android:textColor="#FFFFFF"
+            android:textColor="#E7E5E5"
             android:textSize="25sp" />
 
         <LinearLayout
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="16dp"
             android:orientation="horizontal">
 
             <TextView
@@ -50,7 +50,7 @@
                 android:scrollHorizontally="true"
                 android:text="Type"
                 android:textColor="#3492DD"
-                android:textSize="12sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -64,7 +64,8 @@
                 android:lines="1"
                 android:scrollHorizontally="true"
                 android:text="cost"
-                android:textSize="12sp" />
+                android:textColor="#E7E5E5"
+                android:textSize="16sp" />
         </LinearLayout>
 
 </RelativeLayout>

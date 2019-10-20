@@ -1,7 +1,6 @@
 package com.example.lampanewstextingapp.presenter;
 
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.lampanewstextingapp.model.NetworkService;
@@ -22,10 +21,6 @@ public class News {
     private final ArrayList<Results> results = new ArrayList<>();
     private RecyclerView recyclerView;
     private ViewPager2 viewPager;
-
-    //public News(RecyclerView recyclerView) {
-    //    this.recyclerView = recyclerView;
-    //}
 
     public News(ViewPager2 viewPager, RecyclerView recyclerView) {
         this.viewPager = viewPager;
