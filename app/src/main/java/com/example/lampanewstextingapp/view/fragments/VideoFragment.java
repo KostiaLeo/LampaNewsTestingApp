@@ -1,4 +1,4 @@
-package com.example.lampanewstextingapp.ui.view.Fragments;
+package com.example.lampanewstextingapp.view.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -26,8 +26,8 @@ public class VideoFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_video, container, false);
+//        View root = inflater.inflate(R.layout.fragment_video, container, false);
 
-        return root;
+        return inflater.inflate(R.layout.fragment_video, container, false);
     }
 }

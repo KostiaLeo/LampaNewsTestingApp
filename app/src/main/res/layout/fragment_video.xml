@@ -4,12 +4,12 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.view.Fragments.VideoFragment">
+    tools:context=".view.fragments.VideoFragment">
 <TextView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:text="Список пуст \n Контент появится позже">
+    android:text="@string/video_frag_text">
 
 </TextView>
 </LinearLayout>

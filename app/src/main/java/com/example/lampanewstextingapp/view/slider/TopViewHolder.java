@@ -1,4 +1,4 @@
-package com.example.lampanewstextingapp.ui.view.Slider;
+package com.example.lampanewstextingapp.view.slider;
 
 import android.view.View;
 import android.widget.ImageView;

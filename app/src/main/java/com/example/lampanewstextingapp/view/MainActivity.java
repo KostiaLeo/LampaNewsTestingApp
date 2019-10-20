@@ -1,10 +1,9 @@
-package com.example.lampanewstextingapp.ui.view;
+package com.example.lampanewstextingapp.view;
 
 import android.os.Bundle;
 
 import com.example.lampanewstextingapp.R;
-import com.example.lampanewstextingapp.model.NetworkService;
-import com.example.lampanewstextingapp.ui.view.Fragments.SectionsPagerAdapter;
+import com.example.lampanewstextingapp.view.fragments.SectionsPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.viewpager.widget.ViewPager;

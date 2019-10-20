@@ -1,13 +1,19 @@
 package com.example.lampanewstextingapp.presenter;
 
+import android.content.Context;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.Toast;
+
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.lampanewstextingapp.model.NetworkService;
 import com.example.lampanewstextingapp.model.pojoClasses.MyNews;
 import com.example.lampanewstextingapp.model.pojoClasses.Results;
-import com.example.lampanewstextingapp.ui.view.MainListAdapter.NewsAdapter;
-import com.example.lampanewstextingapp.ui.view.Slider.TopNewsAdapter;
+import com.example.lampanewstextingapp.view.mainList.NewsAdapter;
+import com.example.lampanewstextingapp.view.slider.TopNewsAdapter;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -21,10 +27,11 @@ public class News {
     private final ArrayList<Results> results = new ArrayList<>();
     private RecyclerView recyclerView;
     private ViewPager2 viewPager;
-
-    public News(ViewPager2 viewPager, RecyclerView recyclerView) {
+    private Context context;
+    public News(ViewPager2 viewPager, RecyclerView recyclerView, Context context) {
         this.viewPager = viewPager;
         this.recyclerView = recyclerView;
+        this.context = context;
     }
 
     public ArrayList<Results> getAllNews() {
@@ -43,15 +50,16 @@ public class News {
             @Override
             public void onFailure(Call<MyNews> call, Throwable t) {
                 System.out.println("something wrong\n " + t.getMessage());
+                Toast.makeText(context, "Сервер не отвечает, попробуйте позже", Toast.LENGTH_SHORT).show();
             }
         });
         return results;
     }
 
     private void setRecyclerView(ArrayList<Results> results) {
-        TopNewsAdapter topNewsAdapter = new TopNewsAdapter(results);
-        viewPager.setAdapter(topNewsAdapter);
-        NewsAdapter newsAdapter = new NewsAdapter(results);
-        recyclerView.setAdapter(newsAdapter);
+        //TopNewsAdapter topNewsAdapter = new TopNewsAdapter(results);
+        viewPager.setAdapter(new TopNewsAdapter(results));
+        //NewsAdapter newsAdapter = new NewsAdapter(results);
+        recyclerView.setAdapter(new NewsAdapter(results));
     }
 }

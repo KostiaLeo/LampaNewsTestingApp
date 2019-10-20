@@ -1,4 +1,4 @@
-package com.example.lampanewstextingapp.ui.view.MainListAdapter;
+package com.example.lampanewstextingapp.view.mainList;
 
 import android.view.View;
 import android.widget.ImageView;

@@ -4,21 +4,21 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="8dp"
+    android:layout_marginBottom="@dimen/top_text_pads"
     tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/photo_top"
             android:layout_width="match_parent"
-            android:layout_height="240dp"
-            android:background="#FFFFFF"
+            android:layout_height="@dimen/image_news_height"
+            android:background="@color/white"
             android:scaleType="centerCrop" />
 
         <TextView
             android:id="@+id/name_top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="@dimen/slider_dots_margin_bottom_and_list_item"
             android:ellipsize="end"
             android:fontFamily="sans-serif-black"
             android:gravity="start"
@@ -26,17 +26,17 @@
             android:scrollHorizontally="true"
             android:text="Name"
             android:layout_above="@id/shortlay"
-            android:textColor="#E7E5E5"
-            android:textSize="25sp" />
+            android:textColor="@color/default_news_background"
+            android:textSize="@dimen/news_main_text_size" />
 
         <LinearLayout
             android:id="@+id/shortlay"
             android:layout_alignBottom="@id/photo_top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="@dimen/margin_left_bottom_top_new_shortlay"
+            android:layout_marginTop="@dimen/margin_top_top_new_shortlay"
+            android:layout_marginBottom="@dimen/margin_left_bottom_top_new_shortlay"
             android:orientation="horizontal">
 
             <TextView

@@ -1,4 +1,4 @@
-package com.example.lampanewstextingapp.ui.view.Fragments;
+package com.example.lampanewstextingapp.view.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -15,7 +15,6 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.lampanewstextingapp.presenter.News;
@@ -23,7 +22,6 @@ import com.example.lampanewstextingapp.R;
 
 public class StoriesFragment extends Fragment {
     private Context context;
-    private RecyclerView newsRecycler;
     private ViewPager2 viewPager;
     private LinearLayout sliderDotsPanel;
     private final int countOfTopNews = 10;
@@ -42,7 +40,7 @@ public class StoriesFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_stories, container, false);
-        newsRecycler = root.findViewById(R.id.newzzz);
+        RecyclerView newsRecycler = root.findViewById(R.id.newzzz);
         newsRecycler.setLayoutManager(new LinearLayoutManager(context));
         viewPager = root.findViewById(R.id.viewPager2);
         viewPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
@@ -51,10 +49,10 @@ public class StoriesFragment extends Fragment {
         sliderDotsPanel.bringToFront();
         dotsCount = countOfTopNews;
         dots = new ImageView[dotsCount];
+
         for (int i = 0; i < dotsCount; i++) {
             dots[i] = new ImageView(context);
             dots[i].setImageDrawable(ContextCompat.getDrawable(context, R.drawable.dotgrey));
-
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             params.setMargins(8, 0, 8, 0);
             params.gravity = Gravity.CENTER;
@@ -72,7 +70,8 @@ public class StoriesFragment extends Fragment {
                 dots[position].setImageDrawable(ContextCompat.getDrawable(context, R.drawable.dotblue));
             }
         });
-        News news = new News(viewPager, newsRecycler);
+
+        News news = new News(viewPager, newsRecycler, context);
         news.getAllNews();
         return root;
     }

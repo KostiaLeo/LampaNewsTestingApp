@@ -1,4 +1,4 @@
-package com.example.lampanewstextingapp.ui.view.MainListAdapter;
+package com.example.lampanewstextingapp.view.mainList;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,8 +25,8 @@ public class NewsAdapter extends RecyclerView.Adapter<ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
-            final ViewHolder holder = new ViewHolder(view);
-            return holder;
+//            final ViewHolder holder = new ViewHolder(view);
+            return new ViewHolder(view);
     }
 
     @Override
@@ -43,9 +43,10 @@ public class NewsAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     @Override
     public int getItemCount() {
-        if (results == null) {
-            return 0;
-        }
-        return results.size();
+//        if (results == null) {
+//            return 0;
+//        }
+        return (results == null) ? 0 : results.size();
+//        return results.size();
     }
 }

@@ -1,4 +1,4 @@
-package com.example.lampanewstextingapp.ui.view.Slider;
+package com.example.lampanewstextingapp.view.slider;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +11,6 @@ import com.bumptech.glide.Glide;
 import com.example.lampanewstextingapp.R;
 import com.example.lampanewstextingapp.model.pojoClasses.Image;
 import com.example.lampanewstextingapp.model.pojoClasses.Results;
-import com.example.lampanewstextingapp.ui.view.MainListAdapter.ViewHolder;
 
 import java.util.ArrayList;
 
@@ -44,6 +43,6 @@ public class TopNewsAdapter extends RecyclerView.Adapter<TopViewHolder> {
 
     @Override
     public int getItemCount() {
-        return results.size();
+        return (results == null) ? 0 : results.size();
     }
 }
