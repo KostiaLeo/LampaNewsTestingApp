@@ -1,4 +1,4 @@
-package com.example.lampanewstextingapp.restServices.pojoClasses;
+package com.example.lampanewstextingapp.model.pojoClasses;
 
 public class MyNews {
 //        @SerializedName("next")

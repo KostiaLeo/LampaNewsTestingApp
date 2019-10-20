@@ -1,4 +1,4 @@
-package com.example.lampanewstextingapp.ui.main;
+package com.example.lampanewstextingapp.ui.view.Fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -14,12 +14,15 @@ import com.example.lampanewstextingapp.R;
 
 public class FavFragment extends Fragment {
     private Context context;
-    private FavFragment(Context context){
+
+    private FavFragment(Context context) {
         this.context = context;
     }
+
     static FavFragment newInstance(Context context) {
         return new FavFragment(context);
     }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

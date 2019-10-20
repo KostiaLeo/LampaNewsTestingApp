@@ -1,15 +1,16 @@
-package com.example.lampanewstextingapp;
+package com.example.lampanewstextingapp.presenter;
 
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.lampanewstextingapp.restServices.NetworkService;
-import com.example.lampanewstextingapp.restServices.pojoClasses.MyNews;
-import com.example.lampanewstextingapp.restServices.pojoClasses.Results;
-import com.example.lampanewstextingapp.ui.main.NewsAdapter;
+import com.example.lampanewstextingapp.model.NetworkService;
+import com.example.lampanewstextingapp.model.pojoClasses.MyNews;
+import com.example.lampanewstextingapp.model.pojoClasses.Results;
+import com.example.lampanewstextingapp.ui.view.MainListAdapter.NewsAdapter;
+import com.example.lampanewstextingapp.ui.view.Slider.TopNewsAdapter;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -20,25 +21,27 @@ public class News {
     private MyNews myNews;
     private final ArrayList<Results> results = new ArrayList<>();
     private RecyclerView recyclerView;
-
+    private ViewPager2 viewPager;
     public News(RecyclerView recyclerView) {
         this.recyclerView = recyclerView;
     }
 
-    public ArrayList<Results> getAllNews(){
+    public News(ViewPager2 viewPager) {
+        this.viewPager = viewPager;
+    }
+
+    public ArrayList<Results> getAllNews() {
         NetworkService.getInstance().getNewsApi().getAPINews("json").enqueue(new Callback<MyNews>() {
             @Override
             public void onResponse(Call<MyNews> call, Response<MyNews> response) {
-                if(response.isSuccessful()){
+                if (response.isSuccessful()) {
                     myNews = response.body();
-                    for (int i = 0; i < 10; i++) {
+                    for (int i = 0; i < myNews.getResults().length; i++) {
                         results.add(myNews.getResults()[i]);
                         System.out.println(myNews.getResults()[i].getImage().getHeight());
-//                        resultsHashMap.put(String.valueOf(i), myNews.getResults()[i]);
                     }
                     setRecyclerView(results);
                 }
-
             }
 
             @Override
@@ -48,9 +51,10 @@ public class News {
         });
         return results;
     }
-    private void setRecyclerView(ArrayList<Results> results){
-        NewsAdapter newsAdapter = new NewsAdapter(results);
 
-        recyclerView.setAdapter(newsAdapter);
+    private void setRecyclerView(ArrayList<Results> results) {
+        System.out.println(results.get(0).getImage());
+        TopNewsAdapter topNewsAdapter = new TopNewsAdapter(results);
+        viewPager.setAdapter(topNewsAdapter);
     }
 }

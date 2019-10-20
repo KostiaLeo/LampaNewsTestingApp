@@ -1,4 +1,4 @@
-package com.example.lampanewstextingapp.ui.main;
+package com.example.lampanewstextingapp.ui.view.Fragments;
 
 import android.content.Context;
 
