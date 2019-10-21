@@ -1,4 +1,4 @@
-package com.example.lampanewstextingapp.view.fragments;
+package com.example.newstextingapp.view.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -17,8 +17,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.lampanewstextingapp.presenter.News;
-import com.example.lampanewstextingapp.R;
+import com.example.newstextingapp.presenter.News;
+import com.example.newstextingapp.R;
 /*
  * Author - Levitskiy Konstantin
  */

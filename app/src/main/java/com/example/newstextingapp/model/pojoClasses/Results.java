@@ -1,4 +1,4 @@
-package com.example.lampanewstextingapp.model.pojoClasses;
+package com.example.newstextingapp.model.pojoClasses;
 /*
  * Author - Levitskiy Konstantin
  */

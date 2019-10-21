@@ -1,4 +1,4 @@
-package com.example.lampanewstextingapp.presenter;
+package com.example.newstextingapp.presenter;
 
 import android.content.Context;
 import android.widget.Toast;
@@ -6,11 +6,11 @@ import android.widget.Toast;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.lampanewstextingapp.model.NetworkService;
-import com.example.lampanewstextingapp.model.pojoClasses.MyNews;
-import com.example.lampanewstextingapp.model.pojoClasses.Results;
-import com.example.lampanewstextingapp.view.mainList.NewsAdapter;
-import com.example.lampanewstextingapp.view.slider.TopNewsAdapter;
+import com.example.newstextingapp.model.NetworkService;
+import com.example.newstextingapp.model.pojoClasses.MyNews;
+import com.example.newstextingapp.model.pojoClasses.Results;
+import com.example.newstextingapp.view.mainList.NewsAdapter;
+import com.example.newstextingapp.view.slider.TopNewsAdapter;
 
 import java.util.ArrayList;
 

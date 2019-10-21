@@ -1,4 +1,4 @@
-package com.example.lampanewstextingapp.view.mainList;
+package com.example.newstextingapp.view.mainList;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -6,9 +6,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
-import com.example.lampanewstextingapp.R;
+import com.example.newstextingapp.R;
 /*
  * Author - Levitskiy Konstantin
  */

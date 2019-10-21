@@ -1,4 +1,4 @@
-package com.example.lampanewstextingapp.view.mainList;
+package com.example.newstextingapp.view.slider;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,31 +8,31 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.lampanewstextingapp.R;
-import com.example.lampanewstextingapp.model.pojoClasses.Image;
-import com.example.lampanewstextingapp.model.pojoClasses.Results;
+import com.example.newstextingapp.R;
+import com.example.newstextingapp.model.pojoClasses.Image;
+import com.example.newstextingapp.model.pojoClasses.Results;
 
 import java.util.ArrayList;
 /*
  * Author - Levitskiy Konstantin
  */
-//Adapter for recycler view of main news list
-public class NewsAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class TopNewsAdapter extends RecyclerView.Adapter<TopViewHolder> {
     private ArrayList<Results> results;
 
-    public NewsAdapter(ArrayList<Results> results) {
+    public TopNewsAdapter(ArrayList<Results> results) {
         this.results = results;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
-            return new ViewHolder(view);
+    public TopViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.top_new, parent, false);
+        final TopViewHolder holder = new TopViewHolder(view);
+        return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull TopViewHolder holder, int position) {
             final Results result = results.get(position);
             final Image image = result.getImage();
             Glide.with(holder.itemView.getContext())
@@ -45,6 +45,6 @@ public class NewsAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return (results == null) ? 0 : results.size();
+        return (results == null) ? 0 : 10;
     }
 }

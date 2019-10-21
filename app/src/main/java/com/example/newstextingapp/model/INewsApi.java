@@ -1,6 +1,6 @@
-package com.example.lampanewstextingapp.model;
+package com.example.newstextingapp.model;
 
-import com.example.lampanewstextingapp.model.pojoClasses.MyNews;
+import com.example.newstextingapp.model.pojoClasses.MyNews;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

@@ -1,4 +1,4 @@
-package com.example.lampanewstextingapp;
+package com.example.newstextingapp;
 
 import android.content.Context;
 
