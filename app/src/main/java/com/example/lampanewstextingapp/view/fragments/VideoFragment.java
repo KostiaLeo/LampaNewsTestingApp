@@ -11,7 +11,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.lampanewstextingapp.R;
-
+/*
+ * Author - Levitskiy Konstantin
+ */
 public class VideoFragment extends Fragment {
     private Context context;
 
@@ -26,8 +28,6 @@ public class VideoFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-//        View root = inflater.inflate(R.layout.fragment_video, container, false);
-
         return inflater.inflate(R.layout.fragment_video, container, false);
     }
 }

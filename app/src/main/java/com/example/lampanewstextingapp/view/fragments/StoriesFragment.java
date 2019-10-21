@@ -19,7 +19,10 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.lampanewstextingapp.presenter.News;
 import com.example.lampanewstextingapp.R;
-
+/*
+ * Author - Levitskiy Konstantin
+ */
+//Main fragment's class
 public class StoriesFragment extends Fragment {
     private Context context;
     private ViewPager2 viewPager;
@@ -31,7 +34,7 @@ public class StoriesFragment extends Fragment {
     private StoriesFragment(Context context) {
         this.context = context;
     }
-
+    //newInstance for private constructor
     static StoriesFragment newInstance(Context context) {
         return new StoriesFragment(context);
     }
@@ -39,17 +42,21 @@ public class StoriesFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        //inflating layout for fragment
         View root = inflater.inflate(R.layout.fragment_stories, container, false);
         RecyclerView newsRecycler = root.findViewById(R.id.newzzz);
         newsRecycler.setLayoutManager(new LinearLayoutManager(context));
+        //viewpager for sliding
         viewPager = root.findViewById(R.id.viewPager2);
         viewPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
 
+        // dots for slider
         sliderDotsPanel = root.findViewById(R.id.SliderDots);
         sliderDotsPanel.bringToFront();
         dotsCount = countOfTopNews;
         dots = new ImageView[dotsCount];
 
+        // creating dots panel and defining color (and other parameters) for each dot
         for (int i = 0; i < dotsCount; i++) {
             dots[i] = new ImageView(context);
             dots[i].setImageDrawable(ContextCompat.getDrawable(context, R.drawable.dotgrey));
@@ -61,6 +68,7 @@ public class StoriesFragment extends Fragment {
 
         dots[0].setImageDrawable(ContextCompat.getDrawable(context, R.drawable.dotblue));
 
+        // if we change slider-item than color of dot changes
         viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {

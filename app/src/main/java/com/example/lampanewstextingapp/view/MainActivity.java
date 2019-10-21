@@ -8,7 +8,9 @@ import com.google.android.material.tabs.TabLayout;
 
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
-
+/*
+ * Author - Levitskiy Konstantin
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override

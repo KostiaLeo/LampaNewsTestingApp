@@ -8,7 +8,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.lampanewstextingapp.R;
-
+/*
+ * Author - Levitskiy Konstantin
+ */
 public class TopViewHolder extends RecyclerView.ViewHolder {
     TextView costTv, nameTv, typeTv;
     ImageView photo;

@@ -13,7 +13,9 @@ import com.example.lampanewstextingapp.model.pojoClasses.Image;
 import com.example.lampanewstextingapp.model.pojoClasses.Results;
 
 import java.util.ArrayList;
-
+/*
+ * Author - Levitskiy Konstantin
+ */
 public class TopNewsAdapter extends RecyclerView.Adapter<TopViewHolder> {
     private ArrayList<Results> results;
 

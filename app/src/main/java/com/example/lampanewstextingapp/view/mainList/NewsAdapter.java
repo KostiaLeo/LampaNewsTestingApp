@@ -13,7 +13,10 @@ import com.example.lampanewstextingapp.model.pojoClasses.Image;
 import com.example.lampanewstextingapp.model.pojoClasses.Results;
 
 import java.util.ArrayList;
-
+/*
+ * Author - Levitskiy Konstantin
+ */
+//Adapter for recycler view of main news list
 public class NewsAdapter extends RecyclerView.Adapter<ViewHolder> {
     private ArrayList<Results> results;
 
@@ -25,7 +28,6 @@ public class NewsAdapter extends RecyclerView.Adapter<ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
-//            final ViewHolder holder = new ViewHolder(view);
             return new ViewHolder(view);
     }
 
@@ -43,10 +45,6 @@ public class NewsAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     @Override
     public int getItemCount() {
-//        if (results == null) {
-//            return 0;
-//        }
         return (results == null) ? 0 : results.size();
-//        return results.size();
     }
 }

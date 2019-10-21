@@ -1,5 +1,8 @@
 package com.example.lampanewstextingapp.model.pojoClasses;
-
+/*
+ * Author - Levitskiy Konstantin
+ */
+// Typical pojo-class
 public class Currency
 {
 

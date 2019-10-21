@@ -11,7 +11,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.lampanewstextingapp.R;
-
+/*
+ * Author - Levitskiy Konstantin
+ */
+//3rd's Fragment class
 public class FavFragment extends Fragment {
     private Context context;
 

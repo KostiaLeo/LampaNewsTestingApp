@@ -13,6 +13,7 @@ import com.example.lampanewstextingapp.R;
 /**
  * Author - Levitskiy Konstantin
  */
+//Adapter which gives us certain fragment depends on chosen viewpager item
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes

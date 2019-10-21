@@ -1,8 +1,6 @@
 package com.example.lampanewstextingapp.presenter;
 
 import android.content.Context;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,14 +11,16 @@ import com.example.lampanewstextingapp.model.pojoClasses.MyNews;
 import com.example.lampanewstextingapp.model.pojoClasses.Results;
 import com.example.lampanewstextingapp.view.mainList.NewsAdapter;
 import com.example.lampanewstextingapp.view.slider.TopNewsAdapter;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
+/*
+* Author - Levitskiy Konstantin
+*/
+// presenter connects model and ui
 
 public class News {
     private MyNews myNews;
@@ -33,7 +33,7 @@ public class News {
         this.recyclerView = recyclerView;
         this.context = context;
     }
-
+// Main method for receiving arraylist of results
     public ArrayList<Results> getAllNews() {
         NetworkService.getInstance().getNewsApi().getAPINews("json").enqueue(new Callback<MyNews>() {
             @Override
@@ -56,10 +56,9 @@ public class News {
         return results;
     }
 
+// Giving results into view-class
     private void setRecyclerView(ArrayList<Results> results) {
-        //TopNewsAdapter topNewsAdapter = new TopNewsAdapter(results);
         viewPager.setAdapter(new TopNewsAdapter(results));
-        //NewsAdapter newsAdapter = new NewsAdapter(results);
         recyclerView.setAdapter(new NewsAdapter(results));
     }
 }

@@ -9,7 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.lampanewstextingapp.R;
-
+/*
+ * Author - Levitskiy Konstantin
+ */
+// Holder for all news list
 public class ViewHolder extends RecyclerView.ViewHolder {
     TextView costTv, nameTv, typeTv;
     ImageView photo;

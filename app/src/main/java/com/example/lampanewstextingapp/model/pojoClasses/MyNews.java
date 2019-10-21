@@ -1,8 +1,10 @@
 package com.example.lampanewstextingapp.model.pojoClasses;
-
+/*
+ * Author - Levitskiy Konstantin
+ */
+// Typical pojo-class
+//(main pojo-class)
 public class MyNews {
-//        @SerializedName("next")
-//        @Expose
         private String next;
         private Results[] results;
 
