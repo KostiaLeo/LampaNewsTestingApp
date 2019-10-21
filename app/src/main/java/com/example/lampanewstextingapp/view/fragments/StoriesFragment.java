@@ -72,6 +72,7 @@ public class StoriesFragment extends Fragment {
         viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {
+
                 for (int j = 0; j < dotsCount; j++) {
                     dots[j].setImageDrawable(ContextCompat.getDrawable(context, R.drawable.dotgrey));
                 }

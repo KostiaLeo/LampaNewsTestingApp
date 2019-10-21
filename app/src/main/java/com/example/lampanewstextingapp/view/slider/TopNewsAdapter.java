@@ -33,18 +33,18 @@ public class TopNewsAdapter extends RecyclerView.Adapter<TopViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull TopViewHolder holder, int position) {
-        final Results result = results.get(position);
-        final Image image = result.getImage();
-        Glide.with(holder.itemView.getContext())
-                .load(image.getUrl())
-                .into(holder.photo);
-        holder.nameTv.setText(result.getName());
-        holder.costTv.setText("  -   " + result.getPrice());
-        holder.typeTv.setText(result.getCurrency().getId());
+            final Results result = results.get(position);
+            final Image image = result.getImage();
+            Glide.with(holder.itemView.getContext())
+                    .load(image.getUrl())
+                    .into(holder.photo);
+            holder.nameTv.setText(result.getName());
+            holder.costTv.setText("  -   " + result.getPrice());
+            holder.typeTv.setText(result.getCurrency().getId());
     }
 
     @Override
     public int getItemCount() {
-        return (results == null) ? 0 : results.size();
+        return (results == null) ? 0 : 10;
     }
 }
