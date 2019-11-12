@@ -5,7 +5,6 @@ package com.example.newstextingapp.model.pojoClasses;
 // Typical pojo-class
 
 public class Results {
-
     private String owner;
     private Image image;
     private String price_week, email_count, price_month, phone_count, price, name, id, category, favorite, view_count;

@@ -27,8 +27,8 @@ public class TopNewsAdapter extends RecyclerView.Adapter<TopViewHolder> {
     @Override
     public TopViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.top_new, parent, false);
-        final TopViewHolder holder = new TopViewHolder(view);
-        return holder;
+        //final TopViewHolder holder = new TopViewHolder(view);
+        return new TopViewHolder(view);
     }
 
     @Override
